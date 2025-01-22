@@ -1,60 +1,134 @@
-\documentclass{resume}
+\documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{hyperref}
+\usepackage{mathptmx}
+\usepackage{xcolor}
 
-\name{John Q. Public}
-\address{ 4489 Oxford Lane \\ San Antonio, PA 90024  }
-\address{ 555~$\cdot$~356~$\cdot$~7936 \\ jpublic@example.edu }
+\name{Matthew Pace}
+\address{Barrington, Cambridgeshire}
+\address{
+\textcolor{blue}{\href{https://www.linkedin.com/in/matthewpace98/}{LinkedIn}} \\ 
+\textcolor{blue}{\href{https://github.com/MatthewPace98}{Github}} \\
+\textcolor{blue}{\href{https://MaltiOmics.com}{Website}}
+}
+\usepackage{tikz}
 
-\def\nameskip{\bigskip}
-\def\sectionskip{\medskip}
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\address{+44~$\cdot$~77787~$\cdot$~40848 \\ \href{mailto:matthew.pobox@gmail.com}{matthew.pobox@gmail.com }}
 
 \begin{document}
 
-  \begin{rSection}{Education}
-    {\bf University of California, Berkeley} \hfill {\em June 2004} \\ 
-    { B.S. in Computer Science \& Engineering } \\
-    { Minor in Linguistics } \smallskip \\
-    { Member of Eta Kappa Nu } \\
-    { Member of Upsilon Pi Epsilon } \\
-    Overall GPA: 5.678
-  \end{rSection}
-  
-  \begin{rSection}{Experience}
-  
-    \begin{rSubsection}{ACME, Inc}{October 2010 - Present}{Web Developer}{Palo Alto, CA}
-    \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-    \item Donec et mollis dolor. Praesent et diam eget libero Adobe Coldfusion egestas mattis sit amet vitae augue.
-    \item Nam tincidunt congue enim, ut porta lorem Microsoft SQL lacinia consectetur.
-    \item Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    \item Pellentesque auctor nisi id magna consequat JavaScript sagittis.
-    \item Aliquam at massa ipsum. Quisque bash bibendum purus convallis nulla ultrices ultricies.
-    \end{rSubsection}
-  
-    \begin{rSubsection}{AJAX Hosting}{December 2009 - October 2010}{Lead Developer}{Austin, TX}
-    \item Aenean ut gravida lorem. Ut turpis felis, Perl pulvinar a semper sed, adipiscing id dolor.
-    \item Curabitur dapibus enim sit amet elit pharetra tincidunt website feugiat nisl imperdiet. Ut convallis AJAX libero in urna ultrices accumsan.
-    \item Cum sociis natoque penatibus et magnis dis MySQL parturient montes, nascetur ridiculus mus.
-    \item In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-    \item Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper.
-    \end{rSubsection}
 
-    \begin{rSubsection}{TinySoft}{January 2008 - April 2010}{Web Designer \& Developer}{Gainesville, GA}
-    \item Vivamus PostgreSQL fermentum semper porta. Nunc diam velit PHP, adipiscing ut tristique vitae
-    \item Maecenas convallis ullamcorper ultricies stylesheets.
-    \item Quisque mi metus, unit tests CSS ornare sit amet fermentum et, tincidunt et orci.
-    \item Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id
-    \end{rSubsection}
-  
-  \end{rSection}
-  
-  \begin{rSection}{Technical Strengths}
-    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-      Computer Languages & Prolog, Haskell, AWK, Erlang, Scheme, ML \\
-      Protocols \& APIs & XML, JSON, SOAP, REST \\
-      Databases & MySQL, PostgreSQL, Microsoft SQL \\
-      Tools & SVN, Vim, Emacs
-    \end{tabular}
-  \end{rSection}
+\begin{rSection}{Technical Strengths}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Computer Languages & Python, Bash, R, SQL \\
+Web Technology & Flask, Shiny, HTML, CSS, JavaScript \\
+Sequencing & NGS, RNA-Seq, WGS \\
+Document Preparation & \LaTeX \\
+Cloud Computing & Amazon Web Services \\ \\
+\end{tabular}
+\end{rSection}
 
+\begin{rSection}{Experience}
+\begin{rSubsection}{
+ Research Associate, OrthoBio Therapeutics}
+{November 2022 - Present}{CRUK-CI, Cambridge, UK}{ }
+\item Lead the bioinformatics component in a start-up utilising CRISPR-mediated gene knock-outs to reduce synovial inflammation
+\item Managed our AWS account for data archival in S3 buckets and launched optimised EC2 compute instances
+\item Developed a pan-species guide RNA performance prediction pipeline to rank spacer sequences based on predicted efficacy and specificity
+\item Automated an Amp-Seq data analysis pipeline to output on- and off-target gene edit percentages from raw Illumina sequencing data
+\item Regularly presented results to our American team of clinicians, lawyers, and financial officers
+\item Adapted the iGUIDE pipeline to our customised lab protocol for detection of DNA break events
+\item Analysed single-cell RNA-Seq data from online repositories to help identify key target nodes to knock out
+\item Performed bulk RNA-Seq analysis to observe the downstream effects of gene knock-outs \textit{in vitro}
+\item Generated protein structure prediction models with Alphafold2 to aid in designing a novel Cas9 nuclease
+\item Used the aforementioned pipelines and techniques to generate evidence supporting eight patents filed by the company
+
+\end{rSubsection}
+
+\begin{rSubsection}{
+Research Support Officer I, TargetID {\href{https://www.um.edu.mt/projects/targetid}{\textcolor{blue}{\ExternalLink} }}}
+{March 2021 - June 2022}{University of Malta, Malta}{ }
+\item Liaised with the wet-lab team to co-develop a Flask-based API for user-friendly filtering on our gene variant database
+\item Routinely interacted with terabytes of data hosted on our server cluster through the Slurm Workload Manager
+\item Using R, performed quantitative analysis on LimeSurvey results to search for correlations between lifestyle and gene expression
+\item Benchmarked genomic file compressors and identified the optimal tools for data archiving, reducing storage requirements by 74\%
+\end{rSubsection}
+
+\begin{rSubsection}{
+Presenter, Malta National Aquarium}
+{July 2017 - June 2020}{St. Paul's Bay, Malta}{ }
+\item Part-time job held during my undergraduate studies involving giving informative talks to customers about the species present at the aquarium
+\end{rSubsection}
+\end{rSection}
+\pagebreak
+
+\begin{rSection}{Education}
+\begin{rSubsection}{Master of Science in Bioinformatics}{October 2020 - July 2022}{University of Malta, Malta}{ }
+\item Primary mode of attendance was by research
+\item Taught component included \textit{inter alia} HTS methods, managing relational databases with SQL, the use of Python and the Linux command line, and statistics using R
+\item Dissertation: "RNA-seq Analysis of an Acute Myeloid Leukaemia Cell Line Treated with Phenolic Compounds"
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Bachelor of Science (Hons) in Biology}{October 2017 - June 2020}{University of Malta, Malta}{ }
+\item Provided theoretical and practical experience across all major branches of biology including \textit{inter alia} genetics, biotechnology and microbiology.
+\item Dissertation: "Quantitative Analysis of Bottom Otter Trawl Discards in the Strait of Sicily"
+\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Completed Courses}
+\begin{table}[h!]
+\begin{tabular}{@{}>{}l@{\hspace{6ex}}l@{\hspace{6ex}}c@{}}
+Introduction to Single-cell RNA-seq Data Analysis \href{https://www.linkedin.com/in/matthewpace98/overlay/1635545693672/single-media-viewer/?profileId=ACoAACS_U8EBVhdDUy9KmRe-0zhttQScplbaMnk}{\textcolor{blue}{\ExternalLink}} & University of Cambridge & September 2023 \\
+Full Stack Web Development with Flask \href{https://www.linkedin.com/learning/certificates/12e6418d4c1ea59924259dc040ac2322e1dc9dc8d7b8bd436d9aedf6dc50e672}{\textcolor{blue}{\ExternalLink}} & LinkedIn & July 2023 \\
+Artificial Intelligence Foundations: Machine Learning \href{https://www.linkedin.com/learning/certificates/ff5dd95dae7cc4d94f6d8bd890764ca89388773d610c4b9ff39d080adb383d36}{\textcolor{blue}{\ExternalLink}} & LinkedIn & July 2023 \\
+\end{tabular}
+\end{table}
+\end{rSection}
+
+\begin{rSection}{Pending Publications}
+\item Borg Carbott, F., Vella, M., Borg, J., Portelli, C., Attard, R., Dingli, P., Vassallo, J., Pace, M., Cassar, K., Ebejer, J.P., Formosa, M.M., Farrugia, R., Bezzina Wettinger, S. \textit{Clinical Applications of a Whole Genome Sequencing Study: Examples From Malta, a Mediterranean Population}. American Journal of Human Genetics (submitted), 2025.
+
+\textbf{Contribution}: Optimisation of NGS data analysis pipelines, data collection, and data archival
+\end{rSection}
+
+\begin{rSection}{Patents Contributed To}
+\begin{itemize}
+
+
+\item \textit{Lipid Nanoparticles for Gene Editing Systems}\\WO 2024/215959\\Inventors: Peter J. Millett, Matthew J. Allen, George Gentsch
+
+\item \textit{Gene Editing to Improve Joint Function}\\WO 2023/147442, WO 2023/288135, WO 2022/016121 \\Inventors: George Gentsch, Peter J. Millett, Iain Alasdair Russell, Matthew J. Allen
+
+\item \textit{Gene Editing for Surgery-Related Fibrosis Treatment}\\WO 2024/155948\\Inventors: Peter J. Millett, Matthew J. Allen, George Gentsch, Rahul Sharma
+
+\item \textit{Transmembrane Receptor Gene Editing}\\WO 2023/141531\\Inventors: Peter J. Millett, Iain Alasdair Russell, Matthew J. Allen, George Gentsch
+
+\item \textit{Gene Editing for Intervertebral, Intra- and Peridiscal Therapy and Associated Spinal Disorders}\\WO 2024/215956, WO 2023/201269 \\Inventors: Peter J. Millett, Matthew J. Allen, George Gentsch
+\end{itemize}
+
+\end{rSection}
 \end{document}
