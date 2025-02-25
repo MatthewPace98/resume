@@ -1,0 +1,47 @@
+\documentclass{resume}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{hyperref}
+\usepackage{mathptmx}
+\usepackage{xcolor}
+\usepackage{ifthen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\JOB{Computational Geneticist with AI Focus
+}
+\newcommand\POSTING{Computational Geneticist}
+\newcommand\COMPANY{InstaDeep}
+\newcommand\EMPLOYER{Hiring Team}
+\newcommand\REF{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\name{Matthew Pace}
+\address{Barrington, Cambridgeshire}
+
+\address{+44~$\cdot$~77787~$\cdot$~40848 \\ \href{mailto:matthew.pobox@gmail.com}{matthew.pobox@gmail.com }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{rSection}{}
+\leavevmode \\ \\ \\
+\today \\
+\REF
+\textbf{Re: \JOB}  \\ 
+
+% really good https://www.themuse.com/advice/how-to-start-a-cover-letter-opening-lines-examples
+Dear \EMPLOYER ,
+
+I would like to express my interest in the \POSTING\ posting with \COMPANY\ because I believe I have the technical skills, experience and creative vision to succeed in the role. I am currently the primary bioinformatician in a start-up, OrthoBio Therapeutics, who are developing a CRISPR-based therapeutic to reduce synovial inflammation in diseases such as gout and osteoarthritis. 
+
+\textbf{RNA-Seq Analysis} \\
+I have extensive experience in RNA sequencing (RNA-seq) analysis, both bulk and single-cell, gained through my academic and professional work. At OrthoBio Therapeutics, I analysed bulk RNA-Seq data to assess downstream effects of gene knock-outs \textit{in vitro} (DESeq2) and leveraged single-cell RNA-Seq datasets from public repositories to identify key target nodes for gene editing (Seurat). Additionally, I fine-tuned the Geneformer transformer model using single-cell data from healthy and osteoarthritic tissues to predict gene knock-out targets for therapeutic intervention. During my MSc dissertation, I conducted a differential gene expression analysis of an acute myeloid leukemia (AML) cell line the judge the efficacy of a treatment. This involved preprocessing and alignment of the data to a human reference genome, differential expression analysis using edgeR, and functional enrichment analyses to identify key regulatory pathways influenced by treatment. 
+
+\textbf{Biostatistics} \\
+At OrthoBio Therapeutics, I developed and fit a linear mixed-effects model to gait data, assessing the efficacy of our therapeutic intervention in reducing lameness. This experience strengthened my skills in handling longitudinal data and accounting for individual variation in experimental models. My expertise in statistical programming with R and Python has been pivotal in my bioinformatics work. I have implemented differential expression analyses, various forms of clustering algorithms, dimensionality reduction techniques, and  machine learning techniques predict the performance of guide RNAs.
+
+\textbf{Cancer Research} \\
+My MSc dissertation focused on understanding transcriptional responses in AML following phenolic compound treatment, identifying differentially expressed genes which could signal signs of differentiation from myeloid precursors to monocytes and macrophages. The project deepened my understanding of the genomic causes of cancer and the mechanism of action of certain classes of cures.
+
+I believe my expertise in RNA-seq analysis, biostatistics, and cancer research will enable me to add value to your research, and I look forward to discussing it further. Thank you for considering my application.
+
+\end{rSection}
+\end{document}
+
