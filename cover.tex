@@ -6,10 +6,10 @@
 \usepackage{ifthen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\JOB{Really Good Bioinformatics Specialist (ref: 133742)}
-\newcommand\POSTING{Bioinformatician}
-\newcommand\COMPANY{Google}
-\newcommand\EMPLOYER{Hiring Team}
+\newcommand\JOB{Plant Genomics and Machine Learning Scientist}
+\newcommand\POSTING{Plant Genomics and Machine Learning Scientist}
+\newcommand\COMPANY{the CRUK-SI Data Science Team}
+\newcommand\EMPLOYER{Rebecca Kyte and Recruitment Team}
 \newcommand\REF{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \name{Matthew Pace}
@@ -30,16 +30,61 @@ Dear \EMPLOYER ,
 
 I would like to express my interest in the \POSTING\ posting with \COMPANY\ because I believe I have the technical skills, experience and creative vision to succeed in the role. I am currently the primary bioinformatician in a start-up, OrthoBio Therapeutics, who are developing a CRISPR-based therapeutic to reduce synovial inflammation in diseases such as gout and osteoarthritis. 
 
+
+\ifthenelse{\boolean{false}}{
 \textbf{RNA-Seq Analysis} \\
-I have extensive experience in RNA sequencing (RNA-seq) analysis, both bulk and single-cell, gained through my academic and professional work. At OrthoBio Therapeutics, I analysed bulk RNA-Seq data to assess downstream effects of gene knock-outs \textit{in vitro} (DESeq2) and leveraged single-cell RNA-Seq datasets from public repositories to identify key target nodes for gene editing (Seurat). Additionally, I fine-tuned the Geneformer transformer model using single-cell data from healthy and osteoarthritic tissues to predict gene knock-out targets for therapeutic intervention. During my MSc dissertation, I conducted a differential gene expression analysis of an acute myeloid leukemia (AML) cell line the judge the efficacy of a treatment. This involved preprocessing and alignment of the data to a human reference genome, differential expression analysis using edgeR, and functional enrichment analyses to identify key regulatory pathways influenced by treatment. 
+I have extensive experience in RNA sequencing (RNA-seq) analysis, both bulk and single-cell, gained through my academic and professional work. At OrthoBio Therapeutics, I analysed bulk RNA-Seq data to assess downstream effects of genetic knock-outs \textit{in vitro} (\texttt{DESeq2}) and leveraged single-cell RNA-Seq datasets from the Gene Expression Omnibus to identify key target nodes for gene editing (\texttt{Seurat}). Additionally, I fine-tuned the Geneformer transformer model using single-cell data from healthy and osteoarthritic tissues to predict gene knock-out targets for therapeutic intervention. During my MSc dissertation, I conducted a differential gene expression analysis of an acute myeloid leukemia (AML) cell line the judge the efficacy of a treatment. This involved preprocessing and alignment of the data to a human reference genome, differential expression analysis using \texttt{edgeR}, and functional enrichment analyses to identify key regulatory pathways influenced by treatment. 
+}{}
 
+
+\ifthenelse{\boolean{false}}{
+\textbf{Web development} \\
+During my time with the University of Malta, I spent around 9 months developing the front end of a Flask-based API for user-friendly filtering on our gene variant database. I used the DevExpress and Bootstrap 5 as my main source of UI components. As a personal project, I also enjoyed experimenting with Javascript on my website \href{https://maltiomics.com/}{MaltiOmics.com}.
+
+}{}
+
+\ifthenelse{\boolean{false}}{
+\textbf{Genomic Analyses} \\
+
+}{}
+
+\ifthenelse{\boolean{true}}{
 \textbf{Biostatistics} \\
-At OrthoBio Therapeutics, I developed and fit a linear mixed-effects model to gait data, assessing the efficacy of our therapeutic intervention in reducing lameness. This experience strengthened my skills in handling longitudinal data and accounting for individual variation in experimental models. My expertise in statistical programming with R and Python has been pivotal in my bioinformatics work. I have implemented differential expression analyses, various forms of clustering algorithms, dimensionality reduction techniques, and  machine learning techniques predict the performance of guide RNAs.
+At OrthoBio Therapeutics, I developed and fit a linear mixed-effects model to gait data using the \texttt{lmer} R library, assessing the efficacy of our therapeutic intervention in reducing lameness in canines. This experience strengthened my skills in handling longitudinal data and accounting for individual variation in experimental models. I have implemented differential expression analyses, implemented unsupervised clustering algorithms, and employed dimensionality reduction techniques (PCA, t-SNE, and UMAP) for feature extraction and visualisation. In addition, I have used Python's \texttt{XGBoost} to develop a Gradient Boosting model for guide RNA performance, incorporating cross-validation, hyperparameter optimisation, and model interpretability methods to ensure robust and reproducible results.
+}{}
 
+\ifthenelse{\boolean{false}}{
 \textbf{Cancer Research} \\
 My MSc dissertation focused on understanding transcriptional responses in AML following phenolic compound treatment, identifying differentially expressed genes which could signal signs of differentiation from myeloid precursors to monocytes and macrophages. The project deepened my understanding of the genomic causes of cancer and the mechanism of action of certain classes of cures.
+}{}
 
-I believe my expertise in RNA-seq analysis, biostatistics, and cancer research will enable me to add value to your research, and I look forward to discussing it further. Thank you for considering my application.
+\ifthenelse{\boolean{false}}{
+\textbf{Sequencing Data & Pipeline Development} \\
+In my current role at OrthoBio, I have designed and automated bioinformatics workflows to process complex sequencing datasets, including Illumina-based Amp-Seq and single-cell RNA-Seq. For example, I built a pipeline to analyse on- and off-target gene editing outcomes from raw sequencing data, ensuring rapid, reproducible insights for the rest of the team. This involved initial data quality control, alignment, and final reporting \ifthenelse{\boolean{false}}{
+—skills transferable to processing TCR sequencing data.}
+}{}
+
+
+\ifthenelse{\boolean{false}}{
+\textbf{Machine Learning} \\
+A key aspect of this role is bridging AI models with experimental data, an area where I have demonstrated success. I fine-tuned the Geneformer transformer model on single-cell RNA-Seq data to predict and rank gene knock-out targets that should restore tissue health in osteoarthritis. Additionally, I leveraged AlphaFold2 to design a novel Cas9 nuclease, showcasing my ability to apply AI to structural biology challenges. \ifthenelse{\boolean{false}}{
+I envisage that AlphaFold2 may be used in this role to predict ____}.  In addition, I have used Python's \texttt{XGBoost} to develop a Gradient Boosting model for guide RNA performance, incorporating cross-validation, hyperparameter optimisation, and model interpretability methods to ensure robust and reproducible results.
+}{}
+
+\ifthenelse{\boolean{true}}{
+\textbf{Cross-Functional Collaboration} \\
+At OrthoBio, I worked alongside clinicians, lawyers, and business teams to translate bioinformatics insights into actionable strategies. For instance, I tailored a guide RNA performance prediction pipeline to generate and rank potential spacer sequences for a given genetic target which were used directly in support of eight patents. I presented these results weekly to our American team of stakeholders.
+}{}
+
+I believe my expertise in web development, biostatistics, and general programming expertise will enable me to add value to your research, and I look forward to discussing it further. Thank you for considering my application.
+
+\\
+\\
+Yours Sincerely, \\
+\begin{figure}[H]
+    \includegraphics[width=0.25\linewidth]{signature.png}
+\end{figure}
+
 
 \end{rSection}
 \end{document}
