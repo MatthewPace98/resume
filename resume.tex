@@ -6,6 +6,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{enumitem}
+\usepackage{amsmath}
 
 \newcommand{\ExternalLink}{%
     \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
@@ -31,6 +32,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \name{Matthew Pace}
 \address{Barrington, Cambridgeshire}
+
 \address{
 \textcolor{blue}{\href{https://www.linkedin.com/in/matthewpace98/}{LinkedIn}} \\ 
 \textcolor{blue}{\href{https://github.com/MatthewPace98}{Github}} \\
@@ -42,13 +44,16 @@
 
 \begin{document}
 
+\begin{rSection}{Summary}
+Bioinformatician with four years experience, currently working  as the sole computational biologist in a gene therapy start-up. Built the company's analytical infrastructure from scratch using Nextflow, and adapted it to the company's rapidly changing needs. Skilled in machine learning, cloud computing, and next-generation sequencing analysis.
+\end{rSection}
+
 
 \begin{rSection}{Technical Strengths}
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages & Python, Bash, R, SQL \\
+Programming Languages & Python, Bash, R \\
 Web Technology & Flask, Shiny, HTML, CSS, JavaScript \\
-Sequencing & NGS, RNA-Seq, WGS \\
-Document Preparation & \LaTeX \\
+Sequencing & NGS, scRNA-Seq, WGS \\
 Cloud Computing & Amazon Web Services \\ \\
 \end{tabular}
 \end{rSection}
@@ -57,19 +62,17 @@ Cloud Computing & Amazon Web Services \\ \\
 \begin{rSubsection}{
  Research Associate, OrthoBio Therapeutics}
 {November 2022 - Present}{CRUK-CI, Cambridge, UK}{ }
-\item Lead the bioinformatics component in a start-up utilising CRISPR-mediated gene knock-outs to reduce synovial inflammation.
+\item Lead the bioinformatics component in a start-up utilising genetic knock-outs to reduce synovial inflammation.
 \item Managed our AWS account for data archival in S3 buckets and launched optimised EC2 compute instances.
-\item Developed a pan-species guide RNA performance prediction pipeline to rank spacer sequences based on predicted efficacy and specificity.
-\item Fit a linear mixed-effects model to gait data to determine whether our therapeutic was effective in reducing lameness.
-\item Automated an Amp-Seq data analysis pipeline to output on- and off-target gene edit percentages from raw Illumina sequencing data.
-\item Presented results to our American team of clinicians, lawyers, and financial officers during our weekly meetings.
-%\item Adapted the iGUIDE pipeline to our customised lab protocol for the detection of DNA break events
-\item Analysed single-cell RNA-Seq data from online repositories to help identify key target nodes to knock out.
+\item Developed a pan-species guide RNA performance prediction pipeline utilising machine learning models to rank spacer sequences by predicted efficacy and specificity.
+\item Compiled a statistical report of our canine preclinical trial for FDA review, testing therapeutic efficacy using a linear mixed-effects model.
+\item Automated an Amp-Seq data analysis pipeline using Nextflow to output on- and off-target gene edit percentages from raw Illumina sequencing data.
+\item Analysed single-cell RNA-Seq data from online repositories to identify key target nodes to knock out.
 \item Performed bulk RNA-Seq analysis to observe the downstream effects of gene knock-outs \textit{in vitro}.
-\item Generated protein structure prediction models with AlphaFold2 to optimise a novel Cas9 nuclease for nuclear localisation signal binding.
-\item Fine-tuned the Geneformer transformer model with healthy and osteoarthritic scRNA-Seq data to predict key gene KO targets for restoring tissue health.
-\item Used the aforementioned pipelines and techniques to generate evidence supporting eight patents filed by the company.
-
+\item Generated protein structure prediction models with AlphaFold2 to optimise a novel CRISPR-Cas9 nuclease for nuclear localisation signal binding.
+\item Fine-tuned the Geneformer transformer model with osteoarthritic scRNA-Seq data to predict key gene knock-out targets for restoring tissue health.
+\item Presented results to our American team of clinicians, lawyers, and financial officers during our weekly meetings.
+\item Used output from aforementioned pipelines to generate evidence supporting eight patents filed by the company.
 \end{rSubsection}
 
 \begin{rSubsection}{
@@ -82,11 +85,11 @@ Research Support Officer I, TargetID {\href{https://www.um.edu.mt/projects/targe
 \item Benchmarked genomic file compressors and identified the optimal tools for data archiving, reducing storage requirements by 74\%.
 \end{rSubsection}
 
-\begin{rSubsection}{
-Presenter, Malta National Aquarium}
-{July 2017 - June 2020}{St. Paul's Bay, Malta}{ }
-\item Part-time job which involved giving informative talks to customers about the present aquatic species.
-\end{rSubsection}
+%\begin{rSubsection}{
+%Presenter, Malta National Aquarium}
+%{July 2017 - June 2020}{St. Paul's Bay, Malta}{ }
+%\item Part-time job which involved giving informative talks to %customers about the present aquatic species.
+%\end{rSubsection}
 \end{rSection}
 \pagebreak
 
@@ -99,7 +102,7 @@ Presenter, Malta National Aquarium}
 %------------------------------------------------
 
 \begin{rSubsection}{Bachelor of Science (Hons) in Biology}{October 2017 - June 2020}{University of Malta, Malta}{ }
-\item Provided theoretical and practical experience across all major branches of biology including \textit{inter alia} genetics, biotechnology and microbiology.
+\item Provided theoretical and practical experience across all major branches of biology including \textit{inter alia} genetics, biotechnology, and ecology.
 \item Dissertation: "Quantitative Analysis of Bottom Otter Trawl Discards in the Strait of Sicily".
 \end{rSubsection}
 \end{rSection}
@@ -107,34 +110,42 @@ Presenter, Malta National Aquarium}
 \begin{rSection}{Completed Courses}
 \begin{table}[h!]
 \begin{tabular}{@{}>{}l@{\hspace{6ex}}l@{\hspace{6ex}}c@{}}
+Linear modeling: Hands-on with Fixed and Mixed Effects & University of Cambridge & March 2025 \\
 Introduction to Single-cell RNA-seq Data Analysis \href{https://www.linkedin.com/in/matthewpace98/overlay/1635545693672/single-media-viewer/?profileId=ACoAACS_U8EBVhdDUy9KmRe-0zhttQScplbaMnk}{\textcolor{blue}{\ExternalLink}} & University of Cambridge & September 2023 \\
-Full Stack Web Development with Flask \href{https://www.linkedin.com/learning/certificates/12e6418d4c1ea59924259dc040ac2322e1dc9dc8d7b8bd436d9aedf6dc50e672}{\textcolor{blue}{\ExternalLink}} & LinkedIn & July 2023 \\
-Artificial Intelligence Foundations: Machine Learning \href{https://www.linkedin.com/learning/certificates/ff5dd95dae7cc4d94f6d8bd890764ca89388773d610c4b9ff39d080adb383d36}{\textcolor{blue}{\ExternalLink}} & LinkedIn & July 2023 \\
+Artificial Intelligence Foundations: Machine Learning \href{https://www.linkedin.com/learning/certificates/ff5dd95dae7cc4d94f6d8bd890764ca89388773d610c4b9ff39d080adb383d36}{\textcolor{blue}{\ExternalLink}} & LinkedIn & July 2023
 \end{tabular}
 \end{table}
 \end{rSection}
 
-\begin{rSection}{Publications}
+\begin{rSection}{Pending Publication}
 \begin{itemize}[leftmargin=1pt]
 
-\item Borg Carbott, F., Vella, M., Borg, J., Portelli, C., Attard, R., Dingli, P., Vassallo, J., \textbf{Pace, M.}, Cassar, K., Ebejer, J.P., Formosa, M.M., Farrugia, R., Bezzina Wettinger, S. \textit{Clinical Applications of a Whole Genome Sequencing Study: Examples From Malta, a Mediterranean Population}. European Journal of Human Genetics (submitted), 2025. {\href{https://mts-ejhg.nature.com/ejhg_files/2025/01/27/00025333/00/25333_0_merged_1738000058.pdf}{\textcolor{blue}{\ExternalLink} }}
+\item Borg Carbott, F., Vella, M., Borg, J., Portelli, C., Attard, R., Dingli, P., Vassallo, J., \textbf{Pace, M.}, Cassar, K., Ebejer, J.P., Formosa, M.M., Farrugia, R., Bezzina Wettinger, S. \textit{Clinical Applications of a Whole Genome Sequencing Study: Examples From Malta, a Mediterranean Population}. European Journal of Human Genetics (submitted), 2025. 
 
-\textbf{Contribution}: Optimisation of NGS data analysis pipelines, data collection, and data archival
+\textbf{Contribution}: Optimisation of NGS data analysis pipelines, data collection, and data archival.
 \end{itemize}
 \end{rSection}
 
-\begin{rSection}{Patents Contributed To}
+\begin{rSection}{IP Contributions}
 \begin{itemize}[leftmargin=1pt]
 
-\item \textit{Lipid Nanoparticles for Gene Editing Systems}\\WO 2024/215959\\Inventors: Peter J. Millett, Matthew J. Allen, George Gentsch
+\item \textit{Lipid Nanoparticles for Gene Editing Systems}\\WO 2024/215959
 
-\item \textit{Gene Editing to Improve Joint Function}\\WO 2023/147442, WO 2023/288135, WO 2022/016121 \\Inventors: George Gentsch, Peter J. Millett, Iain Alasdair Russell, Matthew J. Allen
+\item \textit{Gene Editing to Improve Joint Function}\\WO 2023/147442, WO 2023/288135, WO 2022/016121
 
-\item \textit{Gene Editing for Surgery-Related Fibrosis Treatment}\\WO 2024/155948\\Inventors: Peter J. Millett, Matthew J. Allen, George Gentsch, Rahul Sharma
+\item \textit{Gene Editing for Surgery-Related Fibrosis Treatment}\\WO 2024/155948
 
-\item \textit{Transmembrane Receptor Gene Editing}\\WO 2023/141531\\Inventors: Peter J. Millett, Iain Alasdair Russell, Matthew J. Allen, George Gentsch
+\item \textit{Transmembrane Receptor Gene Editing}\\WO 2023/141531
 
-\item \textit{Gene Editing for Intervertebral, Intra- and Peridiscal Therapy and Associated Spinal Disorders}\\WO 2024/215956, WO 2023/201269 \\Inventors: Peter J. Millett, Matthew J. Allen, George Gentsch
+\item \textit{Gene Editing for Intervertebral, Intra- and Peridiscal Therapy and Associated Spinal Disorders}\\WO 2024/215956, WO 2023/201269 
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Miscellaneous}
+\begin{itemize}[leftmargin=1pt]
+
+\item Ranked $28^{\text{th}}$ out of 2190 applicants in Malta's Common Entrance Examination.
+\item Coauthored a local news article{\href{https://timesofmalta.com/article/understanding-bioinformatics-the-key-to-unlocking-our-genetic-secrets.948217}{\textcolor{blue}{\ExternalLink}}} promoting bioinformatics.
 \end{itemize}
 
 \end{rSection}
